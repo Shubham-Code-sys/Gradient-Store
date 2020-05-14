@@ -10,7 +10,7 @@
 </head>
 <body>
     <!-- header start -->
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #4fa2dd;">
+    <nav class="navbar navbar-expand-lg navbar-light mb-4" style="background-color: #4fa2dd;">
         <div class="container d-flex justify-content-between">
             <a class="navbar-brand" href="">Gradient Store</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -54,10 +54,10 @@
     <!-- headre end -->
 
     <!-- main body start-->
-    <div class="container">
+    <div class="container" id="main">
         <div class="card">
-            <img style="background-image: linear-gradient(rgb(58, 10, 148), rgb(24, 230, 161)); width:100%; height: 300px;">
-            <div class="container">
+            <img style="background-image: linear-gradient(rgb(58, 10, 148), rgb(24, 230, 161)); width:100%; height: 280px;">
+            <div id="card_foot">
                 <h4><b>Color Name</b></h4>
                 <p>color - code</p>
             </div>
@@ -88,7 +88,12 @@
         "endColor":"#dc2ff4",
         "name":"My gradient"
         }]
-        
+
+        var main = document.getElementById("main");
+        var i;
+        for(i=0;i<json.length;i++){
+          main.insertAdjacentHTML("beforeend", '<div class="card"><img><div><h4><b>');
+        }
     </script>
 </body>
 </html>
