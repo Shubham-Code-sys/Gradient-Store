@@ -13,7 +13,7 @@
     <!-- header start -->
     <nav class="navbar navbar-expand-lg navbar-light mb-4" style="background-color: #fff;">
         <div class="container d-flex justify-content-between">
-            <a class="navbar-brand" style="color:black;font-size: 25px;font-weight: 100;" href="">Gradient Ocean</a>
+            <a class="navbar-brand" style="color:black;font-size: 30px;font-weight: 100;" href="">Gradient Ocean</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -62,8 +62,8 @@
           <div class="card">
               <div style="background-image: linear-gradient(#3a0a94, #18e6a1); width:100%; height: 280px;"></div>
               <div id="card_foot">
-                  <h4 class="h4"><b>Color Name</b></h4>
-                  <p>#3a0a94 - #18e6a1</p>
+                  <h5 class="h5"><b>Color Name</b></h5>
+                  <p><span class="under_line">#3a0a94 - #18e6a1</span></p>
               </div>
           </div>
         </div>
@@ -72,8 +72,8 @@
           <div class="card">
               <div style="background-image: linear-gradient( 135deg, #FDEB71 10%, #F8D800 100%); width:100%; height: 280px;"></div>
               <div id="card_foot">
-                  <h4 class="h4"><b>Color Name</b></h4>
-                  <p>#FDEB71 - #F8D800</p>
+                  <h5 class="h5"><b>Color Name</b></h5>
+                  <p><span class="under_line">#FDEB71 - #F8D800</span></p>
               </div>
           </div>
         </div>
@@ -82,8 +82,8 @@
           <div class="card">
               <div style="background-image: linear-gradient( 135deg, #FFF720 10%, #3CD500 100%); width:100%; height: 280px;"></div>
               <div id="card_foot">
-                  <h4 class="h4"><b>Color Name</b></h4>
-                  <p>#FFF720 - #3CD500</p>
+                  <h5 class="h5"><b>Color Name</b></h5>
+                  <p><span class="under_line">#FFF720 - #3CD500</span></p>
               </div>
           </div>
         </div>
@@ -92,8 +92,8 @@
           <div class="card">
               <div style="background-image: linear-gradient( 135deg, #FD6E6A 10%, #FFC600 100%); width:100%; height: 280px;"></div>
               <div id="card_foot">
-                  <h4 class="h4"><b>Color Name</b></h4>
-                  <p>#FD6E6A - #FFC600</p>
+                  <h5 class="h5"><b>Color Name</b></h5>
+                  <p><span class="under_line">#FD6E6A - #FFC600</span>></p>
               </div>
           </div>
         </div>
@@ -138,7 +138,7 @@
         var i;
         for(i=0;i<json.length;i++){
           main.insertAdjacentHTML("beforeend", 
-          '<div class="card"><div id="grad"></div><div id="card_foot"><h4><b id="grad_name"></h4><p id="grad_code">');
+          '<div class="card"><div id="grad"></div><div id="card_foot"><h5><b id="grad_name"></h5><p id="grad_code">');
           var grad = document.getElementById("grad");
           var grad_name = document.getElementById("grad_name");
           var grad_code = document.getElementById("grad_code");
