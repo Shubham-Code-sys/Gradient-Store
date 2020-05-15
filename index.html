@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
@@ -10,9 +11,9 @@
 </head>
 <body>
     <!-- header start -->
-    <nav class="navbar navbar-expand-lg navbar-light mb-4" style="background-color: #4fa2dd;">
+    <nav class="navbar navbar-expand-lg navbar-light mb-4" style="background-image: linear-gradient(#18e6a1, #3a0a94);">
         <div class="container d-flex justify-content-between">
-            <a class="navbar-brand" href="">Gradient Store</a>
+            <a class="navbar-brand" style="color: aliceblue;font-size: 25px;" href="">Gradient Store</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -48,7 +49,7 @@
           </form>
         </div> -->
 
-            <a href="" class="choose_custom">Select Custom</a>
+            <!-- <a href="" class="choose_custom">Select Custom</a> -->
         </div>
       </nav>
     <!-- headre end -->
@@ -56,14 +57,20 @@
     <!-- main body start-->
     <div class="container" id="main">
         <div class="card">
-            <img style="background-image: linear-gradient(rgb(58, 10, 148), rgb(24, 230, 161)); width:100%; height: 280px;">
+            <div style="background-image: linear-gradient(#3a0a94, #18e6a1); width:100%; height: 280px;"></div>
             <div id="card_foot">
                 <h4><b>Color Name</b></h4>
-                <p>color - code</p>
+                <p>#3a0a94 - #18e6a1</p>
             </div>
         </div>
     </div>
     <!-- main body end -->
+
+    <!-- footer -->
+
+    <div class="foot">
+      <p style="font-size: 20px;">All &copy;Copyright Reserved 2020 </p>
+    </div>
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" 
     integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
@@ -90,9 +97,19 @@
         }]
 
         var main = document.getElementById("main");
+
         var i;
         for(i=0;i<json.length;i++){
-          main.insertAdjacentHTML("beforeend", '<div class="card"><img><div><h4><b>');
+          main.insertAdjacentHTML("beforeend", 
+          '<div class="card"><div id="grad"></div><div id="card_foot"><h4><b id="grad_name"></h4><p id="grad_code">');
+          var grad = document.getElementById("grad");
+          var grad_name = document.getElementById("grad_name");
+          var grad_code = document.getElementById("grad_code");
+          grad.style.backgroundImage = "linear-gradient(" + json[i].startColor + ", " + json[i].endColor + ")";
+          grad.style.width = "100%";
+          grad.style.height = "280px";
+          grad_name.innerText = json[i].name;
+          grad_code.innerText = json[i].startColor + " - " + json[i].endColor;
         }
     </script>
 </body>
