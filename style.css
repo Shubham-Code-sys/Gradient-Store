@@ -73,10 +73,10 @@ body{
 .foot{
     text-align: center;
     font-weight: 500;
-    background-color: #ccc;
+    background-color: darkgray;
     margin-top: 380px;
     margin-bottom: 0;
-    color: #666699;
+    color: white;
 }
 
 .foot p{
