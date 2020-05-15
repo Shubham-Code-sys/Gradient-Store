@@ -44,8 +44,14 @@
     align-items: center;
 }
 
-#card_foot h4 b{
+#card_foot h5 b, #card_foot p{
     text-transform: uppercase;
+    font-family: sans-serif;
+}
+
+.card:hover .under_line{
+    border-bottom: 2px solid gray;
+    cursor: pointer;
 }
 
 .card:hover {
@@ -73,7 +79,7 @@
 .foot{
     text-align: center;
     font-weight: 500;
-    background-color: darkgray;
+    background-image: linear-gradient(120deg, #495057 0%, #495057 10%);
     margin-top: 380px;
     margin-bottom: 0;
     color: white;
